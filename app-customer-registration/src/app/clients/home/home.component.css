@@ -1,9 +1,13 @@
 /* section#clientList {
   display: none;
 } */
-.list-content {
-  width: auto;
-  height: auto;
+#clientList {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#clientList .list-content {
   margin: 0 auto 37px;
 }
 
@@ -73,6 +77,8 @@
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0 130px;
 }
 #dataTable thead {
   width: 100%;
@@ -84,20 +90,20 @@
 #dataTable thead tr {
   height: 48px;
 }
-#dataTable thead tr th {
+#dataTable thead th {
   text-align: left;
   padding: 12px 0 12px 16px;
   font-weight: 700;
   border: 1px solid transparent;
   border-radius: 40px;
 }
-#dataTable thead tr th:nth-last-child(1){
+#dataTable thead th:nth-last-child(1){
   border-radius: 0 0 40px 0;
 }
-#dataTable thead tr th:not(:nth-last-child(1)) {
+#dataTable thead th:not(:nth-last-child(1)) {
   border-radius: 0;
 }
-#dataTable thead tr th:nth-child(-n+1){
+#dataTable thead th:nth-child(-n+1){
   border-radius: 40px 0 0 40px;
   width: 80px;
   text-align: center;
@@ -134,6 +140,14 @@
 }
 #dataTable tbody tr td:nth-child(-n+1){
   border-radius: 40px 0 0 40px;
+}
+#dataTable tbody tr td:last-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin: auto;
 }
 
 #dataTable tbody tr td {

@@ -1,85 +1,56 @@
-<div class="list-content">
-  <div id="filter">
-    <div class="select">
-      <label>Pesquisar:</label>
-      <select name="clientDataFilter" id="clientDataFilter">
-        <option value="1">Nome do Cliente</option>
-        <option value="2">CPF do Cliente</option>
-        <option value="3">Data de Nascimento</option>
-      </select>
+<section id="#clientList">
+  <h2>Lista de Clientes</h2>
+  <div class="list-content">
+    <div id="filter">
+      <div class="select">
+        <label>Pesquisar:</label>
+        <select name="clientDataFilter" id="clientDataFilter">
+          <option value="1">Nome do Cliente</option>
+          <option value="2">CPF do Cliente</option>
+          <option value="3">Data de Nascimento</option>
+        </select>
+      </div>
+      <div class="search-data">
+        <label>Seleção do filtro aqui:</label>
+        <input type="text" name="search" id="search">
+      </div>
+      <button class="btn-search"><img src="../../../assets/images/search.svg" alt="Botão de pesquisa"></button>
     </div>
-    <div class="search-data">
-      <label></label>
-      <input type="text" name="search" id="search">
-    </div>
-    <button class="btn-search"><img src="../../../assets/images/search.svg" alt="Botão de pesquisa"></button>
-  </div>
-  <table id="dataTable" cellspacing="0">
-    <thead>
-      <th scope="col">
-        <input type="checkbox" name="checkitem" id="">
-      </th>
-      <th scope="col">Nome do Cliente</th>
-      <th scope="col">CPF</th>
-      <th scope="col">Data de Cadastro</th>
-      <th scope="col">Renda Mensal</th>
-      <th scope="col">Ações</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of allClients">
+    <table id="dataTable" cellspacing="0">
+      <thead>
         <th scope="col">
           <input type="checkbox" name="checkitem" id="">
         </th>
-        <td>{{ item.name }}</td>
-        <td>{{ item.cpf }}</td>
-        <td>{{ item.registered }}</td>
-        <td>{{ item.income }}</td>
-        <td>
-          <button [routerLink]="['/clients/edit', item.id]">Editar</button>
-          <button (click)="deleteItem(item.id)">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div id="pagination">
-    <p>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>...</span>
-      <span>>>></span>
-    </p>
-  </div>
-</div>
-
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nome</th>
+        <th scope="col">Nome do Cliente</th>
         <th scope="col">CPF</th>
-        <th scope="col">Data de Nascimento</th>
-        <th scope="col">Renda Mensal</th>
-        <th scope="col">E-mail</th>
         <th scope="col">Data de Cadastro</th>
+        <th scope="col">Renda Mensal</th>
         <th scope="col">Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of allClients">
-        <th scope="row">{{ item.id }}</th>
-        <td>{{ item.name }}</td>
-        <td>{{ item.cpf }}</td>
-        <td>{{ item.birthday }}</td>
-        <td>{{ item.income }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.registered }}</td>
-        <td>
-          <button [routerLink]="['/clients/edit', item.id]">Editar</button>
-          <button (click)="deleteItem(item.id)">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allClients">
+          <th scope="col">
+            <input type="checkbox" name="checkitem" id="">
+          </th>
+          <td>{{ item.name }}</td>
+          <td>{{ item.cpf }}</td>
+          <td>{{ item.registered }}</td>
+          <td>{{ item.income }}</td>
+          <td>
+            <button [routerLink]="['/clients/edit', item.id]">Editar</button>
+            <button (click)="deleteItem(item.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="pagination">
+      <p>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>...</span>
+        <span>>>></span>
+      </p>
+    </div>
+  </div>
+</section>

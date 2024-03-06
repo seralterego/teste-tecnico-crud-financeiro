@@ -4,12 +4,12 @@
 }
 
 #clientRegistration .form-content {
-  margin: 37px auto;
-  padding: 16px;
-  border: 1px solid #d8d8d8;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 37px 0;
+  padding: 16px;
+  border: 1px solid #d8d8d8;
 }
 
 .form-content #registerClient {
