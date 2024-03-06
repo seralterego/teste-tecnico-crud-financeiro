@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Clients } from '../clients';
 import { ClientsService } from '../clients.service';
 import { Title } from '@angular/platform-browser';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class CreateComponent {
 
     this.formCadastro = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(100), this.multipleNamesValidator]],
-      cpf: [0, [Validators.required, this.cpfValidator]],
+      cpf: [0, [Validators.required, Validators.maxLength(11), Validators.minLength(11), this.cpfValidator]],
       birthday: ['', [Validators.required]],
       income: [0, [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -59,29 +59,24 @@ export class CreateComponent {
     return null;
   }
 
-  // Validação se CPF é válido
-  /* private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
+  // Validação do CPF
+  private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
     const value = control.value as string;
-    if (!this.isValidCPF(value)) {
+
+    if (!CreateComponent.isValidCPF(value)) {
       return { 'invalidCPF': true };
     }
     return null;
   }
+  //Verificar se o CPF é válido
+  static isValidCPF(cpf: string): boolean {
+    // Lógica de validação do CPF
+    const cleanedCPF = String(cpf).replace(/\D/g, '');  // Garante que cpf é tratado como string
 
-  // Função para validar o CPF
-  private isValidCPF(cpf: string): boolean {
-    // Remove caracteres não numéricos
-    const cleanedCPF = cpf.replace(/\D/g, '');
-
-    // Verifica se possui 11 dígitos
-    if (cleanedCPF.length !== 11) {
+    if (cleanedCPF.length !== 11 || /^(\d)\1+$/.test(cleanedCPF)) {
       return false;
     }
-    // Verifica se todos os dígitos são iguais
-    if (/^(\d)\1+$/.test(cleanedCPF)) {
-      return false;
-    }
-    // Algoritmo de validação do CPF
+
     let sum = 0;
     let weight = 10;
     for (let i = 0; i < 9; i++) {
@@ -102,5 +97,6 @@ export class CreateComponent {
     const secondRemainder = (sum * 10) % 11;
 
     return secondRemainder === parseInt(cleanedCPF.charAt(10), 10);
-  } */
+  }
+
 }

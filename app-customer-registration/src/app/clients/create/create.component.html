@@ -28,18 +28,25 @@
       <div class="form-item">
         <div class="form-item-fields">
           <label for="clientCPF">CPF do Cliente: </label>
-          <input type="text" formControlName="cpf" id="clientCPF">
+          <input type="text" formControlName="cpf" id="clientCPF" placeholder="Digite o CPF sem pontuação">
         </div>
         <div class="form-item-validators">
           <div *ngIf="formCadastro.get('cpf')?.hasError('required') && formCadastro.get('cpf')?.touched">
-            O campo CPF é obrigatório.
+            O campo é obrigatório.
+          </div>
+          <div *ngIf="formCadastro.get('cpf')?.hasError('minlength') && formCadastro.get('cpf')?.touched">
+            O CPF deve ter exatamente 11 caracteres.
+          </div>
+          <div *ngIf="formCadastro.get('cpf')?.hasError('maxlength') && formCadastro.get('cpf')?.touched">
+            O CPF deve ter exatamente 11 caracteres.
           </div>
           <div *ngIf="formCadastro.get('cpf')?.hasError('invalidCPF') && formCadastro.get('cpf')?.touched">
-            O CPF inserido é inválido.
+            Esse CPF é inválido.
           </div>
         </div>
       </div>
-      <div class="form-item">
+      <!-- Data de Nascimento -->
+      <!-- <div class="form-item">
         <div class="form-item-fields">
           <label for="clientBirthday">Data de Nascimento: </label>
           <input type="date" formControlName="birthday" id="clientBirthday">
@@ -49,8 +56,9 @@
             O campo Data de Nascimento é obrigatório.
           </div>
         </div>
-      </div>
-      <div class="form-item">
+      </div> -->
+      <!-- Renda Mensal -->
+      <!-- <div class="form-item">
         <div class="form-item-fields">
           <label for="clientIncome">Renda Mensal: </label>
           <input type="number" formControlName="income" id="clientIncome">
@@ -60,8 +68,9 @@
             O campo Renda Mensal é obrigatório.
           </div>
         </div>
-      </div>
-      <div class="form-item">
+      </div> -->
+      <!-- Email -->
+      <!-- <div class="form-item">
         <div class="form-item-fields">
           <label for="clientEmail">E-mail: </label>
           <input type="email" formControlName="email" id="clientEmail">
@@ -71,18 +80,19 @@
             Por favor, insira um e-mail válido.
           </div>
         </div>
-      </div>
-      <div class="form-item">
+      </div> -->
+      <!-- Data de Cadastro -->
+      <!-- <div class="form-item">
         <div class="form-item-fields">
           <label for="clientRegistered">Data de Cadastro: </label>
-          <input type="text" formControlName="registered" id="clientRegistered" [readonly]="true">
+          <input type="text" formControlName="registered" id="clientRegistered">
         </div>
-      </div>
+      </div> -->
+      <!-- BTN Salvar Dados -->
       <div class="form-item">
         <div class="form-item-fields">
-
+          <button class="save-data" type="submit"><label>Salvar dados</label></button>
         </div>
-        <button class="save-data" type="submit"><label>Salvar dados</label></button>
       </div>
     </form>
   </div>
