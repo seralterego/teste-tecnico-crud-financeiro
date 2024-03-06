@@ -10,8 +10,39 @@ header {
 }
 
 header .btn-menu {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 15px;
+  padding: 0;
+  cursor: pointer;
+}
+header .btn-menu:hover {
+  background-color: transparent;
+}
+
+header .btn-menu .linha {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-neutral-white);
+  display: block;
+  margin: 2px auto;
+  position: relative;
+  transform-origin: center;
+  transition: .2s;
+}
+
+.btn-menu.ativar .linha:nth-child(1) {
+  transform: translateY(36px) rotate(-45deg);
+}
+.btn-menu.ativar .linha:nth-child(2) {
+  width: 0;
+}
+.btn-menu.ativar .linha:nth-child(2) {
+  transform: translateY(36px) rotate(45deg);
 }
 
 header .header-content {
