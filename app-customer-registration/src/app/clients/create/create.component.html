@@ -3,6 +3,7 @@
   <app-tab-nav></app-tab-nav>
   <div class="form-content content">
     <form id="registerClient" [formGroup]="formCadastro" (ngSubmit)="create()">
+      <!-- Nome do Cliente: -->
       <div class="form-item">
         <div class="form-item-fields">
           <label for="clientName">Nome do Cliente: </label>
@@ -23,42 +24,64 @@
           </div>
         </div>
       </div>
-      <!-- <div class="form-item">
-        <label for="clientCPF">CPF do Cliente: </label>
-        <input type="number" formControlName="cpf" id="clientCPF">
-        <div *ngIf="formCadastro.get('cpf').hasError('required') && formCadastro.get('cpf').touched">
-          O campo CPF do Cliente é obrigatório.
+      <!-- CPF do Cliente: -->
+      <div class="form-item">
+        <div class="form-item-fields">
+          <label for="clientCPF">CPF do Cliente: </label>
+          <input type="text" formControlName="cpf" id="clientCPF">
+        </div>
+        <div class="form-item-validators">
+          <div *ngIf="formCadastro.get('cpf')?.hasError('required') && formCadastro.get('cpf')?.touched">
+            O campo CPF é obrigatório.
+          </div>
+          <div *ngIf="formCadastro.get('cpf')?.hasError('invalidCPF') && formCadastro.get('cpf')?.touched">
+            O CPF inserido é inválido.
+          </div>
         </div>
       </div>
       <div class="form-item">
-        <label for="clientBirthday">Data de Nascimento: </label>
-        <input type="date" formControlName="birthday" id="clientBirthday">
-        <div *ngIf="formCadastro.get('birthday').hasError('required') && formCadastro.get('birthday').touched">
-          O campo Data de Nascimento é obrigatório.
+        <div class="form-item-fields">
+          <label for="clientBirthday">Data de Nascimento: </label>
+          <input type="date" formControlName="birthday" id="clientBirthday">
+        </div>
+        <div class="form-item-validators">
+          <div *ngIf="formCadastro.get('birthday')?.hasError('required') && formCadastro.get('birthday')?.touched">
+            O campo Data de Nascimento é obrigatório.
+          </div>
         </div>
       </div>
       <div class="form-item">
-        <label for="clientIncome">Renda Mensal: </label>
-        <input type="number" formControlName="income" id="clientIncome">
-        <div *ngIf="formCadastro.get('income').hasError('required') && formCadastro.get('income').touched">
-          O campo Renda Mensal é obrigatório.
+        <div class="form-item-fields">
+          <label for="clientIncome">Renda Mensal: </label>
+          <input type="number" formControlName="income" id="clientIncome">
+        </div>
+        <div class="form-item-validators">
+          <div *ngIf="formCadastro.get('income')?.hasError('required') && formCadastro.get('income')?.touched">
+            O campo Renda Mensal é obrigatório.
+          </div>
         </div>
       </div>
       <div class="form-item">
-        <label for="clientEmail">E-mail: </label>
-        <input type="email" formControlName="email" id="clientEmail">
-        <div *ngIf="formCadastro.get('email').hasError('required') && formCadastro.get('email').touched">
-          Por favor, insira um e-mail válido.
+        <div class="form-item-fields">
+          <label for="clientEmail">E-mail: </label>
+          <input type="email" formControlName="email" id="clientEmail">
+        </div>
+        <div class="form-item-validators">
+          <div *ngIf="formCadastro.get('email')?.hasError('required') && formCadastro.get('email')?.touched">
+            Por favor, insira um e-mail válido.
+          </div>
         </div>
       </div>
       <div class="form-item">
-        <label for="clientRegistered">Data de Cadastro: </label>
-        <input type="text" formControlName="registered" id="clientRegistered">
-        <div *ngIf="formCadastro.get('registered').hasError('required') && formCadastro.get('registered').touched">
-          O campo Data de Cadastro é obrigatório.
+        <div class="form-item-fields">
+          <label for="clientRegistered">Data de Cadastro: </label>
+          <input type="text" formControlName="registered" id="clientRegistered" [readonly]="true">
         </div>
-      </div> -->
+      </div>
       <div class="form-item">
+        <div class="form-item-fields">
+
+        </div>
         <button class="save-data" type="submit"><label>Salvar dados</label></button>
       </div>
     </form>
