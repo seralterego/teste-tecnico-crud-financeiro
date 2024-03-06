@@ -1,0 +1,103 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "name": "Brittney West",
+      "cpf": 52331134696,
+      "birthday": "23/10/2014",
+      "income": 36756840336,
+      "email": "brittneywest@equicom.com",
+      "registered": "05/02/2021"
+    },
+    {
+      "id": "2",
+      "name": "Stella Cabrera",
+      "cpf": 23953214070,
+      "birthday": "13/11/2017",
+      "income": 85197658840,
+      "email": "stellacabrera@equicom.com",
+      "registered": "25/04/2018"
+    },
+    {
+      "id": "3",
+      "name": "Warner Houston",
+      "cpf": 95963269695,
+      "birthday": "03/01/2017",
+      "income": 27368677074,
+      "email": "warnerhouston@equicom.com",
+      "registered": "07/08/2022"
+    },
+    {
+      "id": "4",
+      "name": "Lowe Ball",
+      "cpf": 90358444168,
+      "birthday": "22/02/2024",
+      "income": 86669156388,
+      "email": "loweball@equicom.com",
+      "registered": "09/11/2018"
+    },
+    {
+      "id": "5",
+      "name": "Sellers Mercer",
+      "cpf": 56089031623,
+      "birthday": "20/06/2022",
+      "income": 27723015864,
+      "email": "sellersmercer@equicom.com",
+      "registered": "07/07/2018"
+    },
+    {
+      "id": "6",
+      "name": "Cash Sosa",
+      "cpf": 47226880106,
+      "birthday": "16/11/2022",
+      "income": 6284889338,
+      "email": "cashsosa@equicom.com",
+      "registered": "21/08/2018"
+    },
+    {
+      "id": "7",
+      "name": "Washington Sharp",
+      "cpf": 57877800278,
+      "birthday": "18/11/2018",
+      "income": 41034634810,
+      "email": "washingtonsharp@equicom.com",
+      "registered": "24/07/2014"
+    },
+    {
+      "id": "8",
+      "name": "Lola Herring",
+      "cpf": 75977363510,
+      "birthday": "21/07/2021",
+      "income": 14118816889,
+      "email": "lolaherring@equicom.com",
+      "registered": "01/01/2016"
+    },
+    {
+      "id": "10",
+      "name": "Taylor Frazier",
+      "cpf": 80410491374,
+      "birthday": "14/10/2020",
+      "income": 63630721341,
+      "email": "taylorfrazier@equicom.com",
+      "registered": "05/03/2021"
+    },
+    {
+      "id": 0,
+      "name": "Teste Leitão",
+      "cpf": 12345678900,
+      "birthday": "1986-10-08",
+      "income": 5000,
+      "email": "teste@teste.com",
+      "registered": "05/03/2024"
+    },
+    {
+      "id": "9",
+      "name": "Sarah Kelley updated",
+      "cpf": 37740472879,
+      "birthday": "2023-09-16",
+      "income": 28849983321,
+      "email": "sarahkelley@equicom.com",
+      "registered": "17/05/2022"
+    }
+  ]
+}

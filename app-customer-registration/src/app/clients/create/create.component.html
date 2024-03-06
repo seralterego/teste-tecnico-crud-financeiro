@@ -1,0 +1,30 @@
+<div class="container">
+  <legend>Cadastro de Cliente</legend>
+  <form>
+    <div>
+      <label for="clientName">Nome</label>
+      <input type="text" name="name" class="" id="clientName" [(ngModel)] = "formdata.name">
+    </div><br>
+    <div>
+      <label for="clientCPF">CPF</label>
+      <input type="number" name="cpf" class="" id="clientCPF" [(ngModel)] = "formdata.cpf">
+    </div><br>
+    <div>
+      <label for="clientBirthday">Data de Nascimento</label>
+      <input type="date" name="birthday" class="" id="clientBirthday" [(ngModel)] = "formdata.birthday">
+    </div><br>
+    <div>
+      <label for="clientIncome">Renda Mensal</label>
+      <input type="number" name="income" class="" id="clientIncome" [(ngModel)] = "formdata.income">
+    </div><br>
+    <div>
+      <label for="clientEmail">E-mail</label>
+      <input type="email" name="email" class="" id="clientEmail" [(ngModel)] = "formdata.email">
+    </div><br>
+    <div>
+      <label for="clientRegistered">Data de Cadastro</label>
+      <input type="email" name="registered" class="" id="clientRegistered" [(ngModel)] = "formdata.registered">
+    </div><br>
+    <button type="button" (click)="create()">Salvar Dados</button>
+  </form>
+</div>
