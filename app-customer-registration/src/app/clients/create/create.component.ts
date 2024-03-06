@@ -24,7 +24,7 @@ export class CreateComponent {
 
     this.formCadastro = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(100), this.multipleNamesValidator]],
-      cpf: [0, [Validators.required]], //, this.cpfValidator
+      cpf: [0, [Validators.required, this.cpfValidator]],
       birthday: ['', [Validators.required]],
       income: [0, [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -59,19 +59,17 @@ export class CreateComponent {
     return null;
   }
 
-  // Validação para verificar se CPF é válido
-  /* private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
+  // Validação se CPF é válido
+  private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
     const value = control.value as string;
-
     if (!this.isValidCPF(value)) {
       return { 'invalidCPF': true };
     }
-
     return null;
-  } */
+  }
 
   // Função para validar o CPF
-  /* private isValidCPF(cpf: string): boolean {
+  private isValidCPF(cpf: string): boolean {
     // Remove caracteres não numéricos
     const cleanedCPF = cpf.replace(/\D/g, '');
 
@@ -104,5 +102,5 @@ export class CreateComponent {
     const secondRemainder = (sum * 10) % 11;
 
     return secondRemainder === parseInt(cleanedCPF.charAt(10), 10);
-  } */
+  }
 }
