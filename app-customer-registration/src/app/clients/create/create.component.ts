@@ -60,7 +60,7 @@ export class CreateComponent {
   }
 
   // Validação se CPF é válido
-  private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
+  /* private cpfValidator(control: AbstractControl): { [key: string]: any } | null {
     const value = control.value as string;
     if (!this.isValidCPF(value)) {
       return { 'invalidCPF': true };
@@ -102,5 +102,5 @@ export class CreateComponent {
     const secondRemainder = (sum * 10) % 11;
 
     return secondRemainder === parseInt(cleanedCPF.charAt(10), 10);
-  }
+  } */
 }
