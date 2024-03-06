@@ -10,10 +10,12 @@ import { ClientsModule } from './clients/clients.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { TabNavComponent } from './shared/tab-nav/tab-nav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    TabNavComponent
   ],
   imports: [
     BrowserModule,
@@ -22,10 +24,9 @@ import { TabNavComponent } from './shared/tab-nav/tab-nav.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    ClientsModule,
-    TabNavComponent
+    ClientsModule    
   ],
-  exports: [],
+  exports: [TabNavComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
