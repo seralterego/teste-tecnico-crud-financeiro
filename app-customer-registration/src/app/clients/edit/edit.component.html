@@ -1,4 +1,6 @@
 <section id="editRegistration">
+  <h2>Editar Cadastro</h2>
+  <!-- <app-tab-nav></app-tab-nav> -->
   <div class="form-content content">
     <form action="" id="registerClient">
       <div class="form-item">
@@ -26,6 +28,7 @@
         <input type="text" name="registered" id="clientRegistered" [(ngModel)] = "formdata.registered">
       </div>
       <div class="form-item">
+        <button class="cancel-data" [routerLink]="['/clients/home']"><label>Cancelar</label></button>
         <button class="save-data" (click)="update()"><label>Atualizar dados</label></button>
       </div>
     </form>
