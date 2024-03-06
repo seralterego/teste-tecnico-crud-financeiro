@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Clients } from '../clients';
 import { ClientsService } from '../clients.service';
-ClientsService
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,9 @@ ClientsService
 export class HomeComponent implements OnInit {
   allClients: Clients[] = [];
 
-  constructor(private clientsService: ClientsService) { }
+  constructor(private clientsService: ClientsService, private titleService: Title) {
+    this.titleService.setTitle("Lista de Clientes");
+  }
 
   ngOnInit(): void {
     this.clientsService.getAll().subscribe((data) => {

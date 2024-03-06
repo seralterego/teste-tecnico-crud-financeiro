@@ -82,7 +82,7 @@
       "registered": "05/03/2021"
     },
     {
-      "id": 0,
+      "id": "0",
       "name": "Teste Leitão",
       "cpf": 12345678900,
       "birthday": "1986-10-08",
@@ -98,6 +98,24 @@
       "income": 28849983321,
       "email": "sarahkelley@equicom.com",
       "registered": "17/05/2022"
+    },
+    {
+      "id": "1",
+      "name": "Brittney West",
+      "cpf": 52331134696,
+      "birthday": "23/10/2014",
+      "income": 36756840336,
+      "email": "brittneywest@equicom.com",
+      "registered": "05/02/2021"
+    },
+    {
+      "id": "1",
+      "name": "Brittney West",
+      "cpf": 52331134696,
+      "birthday": "23/10/2014",
+      "income": 36756840336,
+      "email": "brittneywest@equicom.com",
+      "registered": "05/02/2021"
     }
   ]
 }

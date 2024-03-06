@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Clients } from '../clients';
 import { ClientsService } from '../clients.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create',
@@ -9,7 +10,13 @@ import { ClientsService } from '../clients.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-  constructor(private clientsService: ClientsService, private router: Router) { }
+  constructor(
+    private clientsService: ClientsService, 
+    private router: Router,
+    private titleService: Title
+  ){
+    this.titleService.setTitle("Formulário de Cadastro")
+  }
 
   formdata: Clients = {
     id: 0,

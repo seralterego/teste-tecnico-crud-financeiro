@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ClientsService } from '../clients.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Clients } from '../clients';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit',
@@ -12,8 +13,11 @@ export class EditComponent {
   constructor(
     private clientsService: ClientsService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private titleService: Title
+  ){
+    this.titleService.setTitle("Editar Cadastro")
+  }
 
   formdata: Clients = {
     id: 0,

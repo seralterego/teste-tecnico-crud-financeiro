@@ -83,3 +83,7 @@ section h2 {
   color: var(--color-brand-primary-dark);
   text-transform: uppercase;
 }
+
+.container {
+  margin-top: 60px;
+}
