@@ -5,11 +5,11 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
-  {path: 'clients/home', component: HomeComponent},
+  {path: 'clients/home', component: HomeComponent, data: {title: 'Lista de Clientes'}},
   {path: 'clients', redirectTo:'clients/home', pathMatch:'full'},
   {path: '', redirectTo:'clients/home', pathMatch:'full'},
-  {path: 'clients/create', component: CreateComponent},
-  {path: 'clients/edit/:id', component: EditComponent}
+  {path: 'clients/create', component: CreateComponent, data: {title: 'Formulário de Cadastro'}},
+  {path: 'clients/edit/:id', component: EditComponent, data: {title: 'Editar Cadastro'}}
 ];
 
 @NgModule({
