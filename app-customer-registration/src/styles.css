@@ -11,6 +11,7 @@
 :root {
   /* Primary color */
   --color-brand-primary-dark: #0A4A5B;
+  --color-brand-primary-hover: #11728B;
   /* Secondary color */
   --color-support-02-dark: #5CAC41;
   /* Support colors */
@@ -59,6 +60,13 @@ button {
   padding: 8px 16px;
   border: 1px solid var(--color-brand-primary-dark);
   background: var(--color-brand-primary-dark);
+  margin: 12px 0 0 auto;
+  font-weight: 700;
+}
+button:hover {
+  transition: .2s;
+  border: 1px solid var(--color-brand-primary-dark);
+  background: var(--color-brand-primary-hover);
   margin: 12px 0 0 auto;
 }
 
