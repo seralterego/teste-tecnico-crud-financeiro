@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { Clients } from '../clients';
 import { ClientsService } from '../clients.service';
 import { Title } from '@angular/platform-browser';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -29,3 +28,4 @@ export class HomeComponent implements OnInit {
     })
   }
 }
+
