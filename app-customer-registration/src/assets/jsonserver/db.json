@@ -83,74 +83,11 @@
     },
     {
       "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
-      "registered": "06/03/2024"
-    },
-    {
-      "id": 0,
-      "name": "",
-      "cpf": 0,
-      "birthday": "",
-      "income": 0,
-      "email": "",
+      "name": "Teste Leitão",
+      "cpf": 123456789,
+      "birthday": "1986-10-08",
+      "income": 5000,
+      "email": "teste@teste.com",
       "registered": "06/03/2024"
     }
   ]

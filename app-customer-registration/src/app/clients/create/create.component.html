@@ -2,33 +2,64 @@
   <h2>Formulário de Cadastro</h2>
   <app-tab-nav></app-tab-nav>
   <div class="form-content content">
-    <form id="registerClient">
+    <form id="registerClient" [formGroup]="formCadastro" (ngSubmit)="create()">
       <div class="form-item">
-        <label for="clientName">Nome do Cliente: </label>
-        <input type="text" name="name" id="clientName" [(ngModel)] = "formdata.name">
+        <div class="form-item-fields">
+          <label for="clientName">Nome do Cliente: </label>
+          <input type="text" formControlName="name" id="clientName">
+        </div>
+        <div class="form-item-validators">
+          <div *ngIf="formCadastro.get('name')?.hasError('required') && formCadastro.get('name')?.touched">
+            O campo é obrigatório.
+          </div>
+          <div *ngIf="formCadastro.get('name')?.hasError('minlength') && formCadastro.get('name')?.touched">
+            O campo deve ter pelo menos 3 caracteres.
+          </div>
+          <div *ngIf="formCadastro.get('name')?.hasError('maxlength') && formCadastro.get('name')?.touched">
+            O campo deve ter no máximo 100 caracteres.
+          </div>
+          <div *ngIf="formCadastro.get('name')?.hasError('multipleNames') && formCadastro.get('name')?.touched">
+            O campo deve conter pelo menos um sobrenome.
+          </div>
+        </div>
       </div>
-      <div class="form-item">
+      <!-- <div class="form-item">
         <label for="clientCPF">CPF do Cliente: </label>
-        <input type="number" name="cpf" id="clientCPF" [(ngModel)] = "formdata.cpf">
+        <input type="number" formControlName="cpf" id="clientCPF">
+        <div *ngIf="formCadastro.get('cpf').hasError('required') && formCadastro.get('cpf').touched">
+          O campo CPF do Cliente é obrigatório.
+        </div>
       </div>
       <div class="form-item">
         <label for="clientBirthday">Data de Nascimento: </label>
-        <input type="date" name="birthday" id="clientBirthday" [(ngModel)] = "formdata.birthday">
+        <input type="date" formControlName="birthday" id="clientBirthday">
+        <div *ngIf="formCadastro.get('birthday').hasError('required') && formCadastro.get('birthday').touched">
+          O campo Data de Nascimento é obrigatório.
+        </div>
       </div>
       <div class="form-item">
         <label for="clientIncome">Renda Mensal: </label>
-        <input type="number" name="income" id="clientIncome" [(ngModel)] = "formdata.income">
+        <input type="number" formControlName="income" id="clientIncome">
+        <div *ngIf="formCadastro.get('income').hasError('required') && formCadastro.get('income').touched">
+          O campo Renda Mensal é obrigatório.
+        </div>
       </div>
       <div class="form-item">
         <label for="clientEmail">E-mail: </label>
-        <input type="email" name="email" id="clientEmail" [(ngModel)] = "formdata.email">
+        <input type="email" formControlName="email" id="clientEmail">
+        <div *ngIf="formCadastro.get('email').hasError('required') && formCadastro.get('email').touched">
+          Por favor, insira um e-mail válido.
+        </div>
       </div>
       <div class="form-item">
         <label for="clientRegistered">Data de Cadastro: </label>
-        <input type="text" name="registered" id="clientRegistered" [(ngModel)] = "formdata.registered">
-      </div>
+        <input type="text" formControlName="registered" id="clientRegistered">
+        <div *ngIf="formCadastro.get('registered').hasError('required') && formCadastro.get('registered').touched">
+          O campo Data de Cadastro é obrigatório.
+        </div>
+      </div> -->
       <div class="form-item">
-        <button class="save-data" (click)="create()"><label>Salvar dados</label></button>
+        <button class="save-data" type="submit"><label>Salvar dados</label></button>
       </div>
     </form>
   </div>

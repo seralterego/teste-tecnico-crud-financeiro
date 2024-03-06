@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ClientsRoutingModule } from './clients-routing.module';
 
@@ -19,7 +19,8 @@ import { TabNavComponent } from '../shared/tab-nav/tab-nav.component';
   imports: [
     CommonModule,
     ClientsRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientsModule { }
